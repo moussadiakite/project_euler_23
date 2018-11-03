@@ -7,9 +7,7 @@
 //
 
 #include <iostream>
-#include <cmath>
 #include <vector>
-#include <unordered_set>
 #include <time.h>
 
 /*
@@ -38,12 +36,41 @@ const int smallest_abundant_number{12};
 const int first_sum_of_two_abundant_numbers{24};
 
 std::vector<int> g_abundant_numbers;
-std::unordered_set<int> g_possible_sums;
+bool abundant_numbers_sum[g_limit + 1] = {false};
 
 //tell if divisor is an integer divisor of number
 bool isDivisorOf(int divisor, int number)
 {
 	return number % divisor == 0;
+}
+
+int naiveSumOfDivisors(int number){
+	if(number == 1)
+		return 1;
+	int sum{number + 1};
+	int i;
+	for(i = 2; i * i < number; i++)
+		if(isDivisorOf(i, number))
+			sum += i + number / i;
+	if(i * i == number)
+		sum += i;
+	return sum;
+}
+
+int sumOfDivisors(int number){
+	int sum{1};
+	int sum_pow_p_i;
+	for(int i = 2; i * i <= number; ++i){
+		sum_pow_p_i = 1;
+		while(number % i == 0){
+			sum_pow_p_i = i * sum_pow_p_i + 1;
+			number /= i;
+		}
+		sum *= sum_pow_p_i;
+	}
+	if(number > 1)
+		sum *= number + 1;
+	return sum;
 }
 
 bool isAbundantNumber(int number)
@@ -60,27 +87,10 @@ bool isAbundantNumber(int number)
 		return true;
 	
 	/*
-	 * 1 divides all numbers and it allows us to exclude further the adding of the number
-	 * itself from the sum
+	 * As number is added in the sum of divisor we also need to add number to the
+	 * other member of the inequation
 	 */
-	int sum{1};
-	
-	/*
-	 * we use the theorem that says that all divisors of a number are lower or equal to
-	 * the square root of this number
-	 */
-	int i;
-	for(i = 2; i < sqrt(number); ++i)
-	{
-		if(isDivisorOf(i, number))
-			sum += i + number/i; // if i is a divisor then number/i is also one
-	}
-	
-	//in case sqrt(number) is an integer value and then also a divisor of number
-	if(i * i == number)
-		sum += i;
-	
-	return sum > number;
+	return sumOfDivisors(number) > 2 * number;
 }
 
 bool isSumOfTwoAbundantNumbers(int number)
@@ -126,40 +136,34 @@ void storeAllPositiveAbundantNumbers(int limit){
 			g_abundant_numbers.push_back(i);
 }
 
-//store all sums of two abundant numbers lower than g_limit
-void storePossibleSums(int limit){
-	int sum;
+/*
+ * compute the sums of abundant numbers that are the sum of two abundant numbers lower
+ * than g_limit
+ */
+int getTotalSum(){
+	int sum_2;
 	for(int i{0}; i < g_abundant_numbers.size(); ++i)
-		for(int j{i}; j < g_abundant_numbers.size(); ++j)
+		for(int j{i};j < g_abundant_numbers.size(); ++j)
 		{
-			sum = g_abundant_numbers.at(i) + g_abundant_numbers.at(j);
-			if(sum <= limit)
-			{
-				auto search = g_possible_sums.find(sum);
-				if(search == g_possible_sums.end())
-					g_possible_sums.insert(sum);
-			}
+			sum_2 = g_abundant_numbers[i] + g_abundant_numbers[j];
+			if(sum_2 <= g_limit)
+				abundant_numbers_sum[sum_2] = true;
 		}
+	
+	int sum{0};
+	
+	for(int i{1}; i < g_limit; ++i)
+		if(!abundant_numbers_sum[i])
+			sum += i;
+	return sum;
 }
 
-void betterSolution()
+void bestSolution()
 {
 	//store all positive abundant numbers lower than g_limit
 	storeAllPositiveAbundantNumbers(g_limit);
 	
-	//store all numbers that are sum of two abundant numbers lower than g_limit
-	storePossibleSums(g_limit);
-	
-	/*
-	 * g_limit * (g_limit + 1) / 2 is the sum of all numbers from 1 to g_limit
-	 * sum is the sum of all the numbers that can be written as the sum of two
-	 * abundant numbers
-	 * and you obtain the final result by the difference of these 2 values
-	 */
-	int sum{0};
-	for (auto itr = g_possible_sums.begin(); itr != g_possible_sums.end(); ++itr)
-		sum += *itr;
-	printResult(g_limit * (g_limit + 1) / 2 - sum);
+	printResult(getTotalSum());
 }
 
 int main(int argc, const char * argv[])
@@ -168,7 +172,7 @@ int main(int argc, const char * argv[])
 	naiveSolution();
 	printf("Time taken: %.2fs for naiveSolution\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
 	tStart = clock();
-	betterSolution();
+	bestSolution();
 	printf("Time taken: %.2fs for betterSolution\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
     return 0;
 }
