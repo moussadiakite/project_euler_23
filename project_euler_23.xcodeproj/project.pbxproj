@@ -41,7 +41,7 @@
 		9DC35DD5218DD5ED004ED28A = {
 			isa = PBXGroup;
 			children = (
-				9DC35DE0218DD5ED004ED28A /* project_euler_23 */,
+				9DC35DE0218DD5ED004ED28A /* Non_abundant_sums */,
 				9DC35DDF218DD5ED004ED28A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,13 +54,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9DC35DE0218DD5ED004ED28A /* project_euler_23 */ = {
+		9DC35DE0218DD5ED004ED28A /* Non_abundant_sums */ = {
 			isa = PBXGroup;
 			children = (
 				9DC35DE1218DD5ED004ED28A /* main.cpp */,
 			);
-			path = project_euler_23;
+			path = Non_abundant_sums;
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 /* End PBXGroup section */
 
