@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9DC35DE2218DD5ED004ED28A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DC35DE1218DD5ED004ED28A /* main.cpp */; };
+		9DC35DEE218E3D66004ED28A /* non_abundant_sum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DC35DED218E3D66004ED28A /* non_abundant_sum.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		9DC35DDE218DD5ED004ED28A /* project_euler_23 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = project_euler_23; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DC35DE1218DD5ED004ED28A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		9DC35DEC218E3D4B004ED28A /* non_abundant_sum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = non_abundant_sum.h; sourceTree = "<group>"; };
+		9DC35DED218E3D66004ED28A /* non_abundant_sum.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = non_abundant_sum.cpp; sourceTree = "<group>"; };
+		9DC35DEF218E4375004ED28A /* non_abundant_sum_constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = non_abundant_sum_constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 		9DC35DD5218DD5ED004ED28A = {
 			isa = PBXGroup;
 			children = (
+				9DC35DEB218E3D15004ED28A /* Lexicographic permutations */,
 				9DC35DE0218DD5ED004ED28A /* Non_abundant_sums */,
 				9DC35DDF218DD5ED004ED28A /* Products */,
 			);
@@ -58,10 +63,20 @@
 			isa = PBXGroup;
 			children = (
 				9DC35DE1218DD5ED004ED28A /* main.cpp */,
+				9DC35DEC218E3D4B004ED28A /* non_abundant_sum.h */,
+				9DC35DED218E3D66004ED28A /* non_abundant_sum.cpp */,
+				9DC35DEF218E4375004ED28A /* non_abundant_sum_constants.h */,
 			);
 			path = Non_abundant_sums;
 			sourceTree = "<group>";
 			usesTabs = 1;
+		};
+		9DC35DEB218E3D15004ED28A /* Lexicographic permutations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Lexicographic permutations";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -119,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DC35DEE218E3D66004ED28A /* non_abundant_sum.cpp in Sources */,
 				9DC35DE2218DD5ED004ED28A /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +258,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4AR6R2SCHV;
+				OTHER_LDFLAGS = "-v";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -251,6 +268,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4AR6R2SCHV;
+				OTHER_LDFLAGS = "-v";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
