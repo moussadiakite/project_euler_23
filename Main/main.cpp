@@ -8,15 +8,14 @@
 
 #include <iostream>
 #include <time.h>
-#include "non_abundant_sum.h"
+#include "TripletsSum.hpp"
+#include <vector>
 
 int main(int argc, const char * argv[])
 {
 	clock_t tStart = clock();
-	naiveSolution();
-	printf("Time taken: %.2fs for naiveSolution\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
-	tStart = clock();
-	bestSolution();
-	printf("Time taken: %.2fs for betterSolution\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
+    std::vector<int> arr{0, -1, 2, -3, 1};
+    printTripletsSum(arr);
+	printf("Time taken: %.2fs for bestSolution\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
     return 0;
 }

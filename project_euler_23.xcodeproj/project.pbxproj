@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9DC35DE2218DD5ED004ED28A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DC35DE1218DD5ED004ED28A /* main.cpp */; };
 		9DC35DEE218E3D66004ED28A /* non_abundant_sum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DC35DED218E3D66004ED28A /* non_abundant_sum.cpp */; };
+		9DE1F2E921A4945900745EFB /* TripletsSum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE1F2E721A4945900745EFB /* TripletsSum.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,8 @@
 		9DC35DEC218E3D4B004ED28A /* non_abundant_sum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = non_abundant_sum.h; sourceTree = "<group>"; };
 		9DC35DED218E3D66004ED28A /* non_abundant_sum.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = non_abundant_sum.cpp; sourceTree = "<group>"; };
 		9DC35DEF218E4375004ED28A /* non_abundant_sum_constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = non_abundant_sum_constants.h; sourceTree = "<group>"; };
+		9DE1F2E721A4945900745EFB /* TripletsSum.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TripletsSum.cpp; sourceTree = "<group>"; };
+		9DE1F2E821A4945900745EFB /* TripletsSum.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TripletsSum.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +48,8 @@
 		9DC35DD5218DD5ED004ED28A = {
 			isa = PBXGroup;
 			children = (
+				9DE1F2E621A4943600745EFB /* TripletsSum */,
+				9DC35DF3218EF8EA004ED28A /* Main */,
 				9DC35DEB218E3D15004ED28A /* Lexicographic permutations */,
 				9DC35DE0218DD5ED004ED28A /* Non_abundant_sums */,
 				9DC35DDF218DD5ED004ED28A /* Products */,
@@ -62,7 +67,6 @@
 		9DC35DE0218DD5ED004ED28A /* Non_abundant_sums */ = {
 			isa = PBXGroup;
 			children = (
-				9DC35DE1218DD5ED004ED28A /* main.cpp */,
 				9DC35DEC218E3D4B004ED28A /* non_abundant_sum.h */,
 				9DC35DED218E3D66004ED28A /* non_abundant_sum.cpp */,
 				9DC35DEF218E4375004ED28A /* non_abundant_sum_constants.h */,
@@ -76,6 +80,23 @@
 			children = (
 			);
 			path = "Lexicographic permutations";
+			sourceTree = "<group>";
+		};
+		9DC35DF3218EF8EA004ED28A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9DC35DE1218DD5ED004ED28A /* main.cpp */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9DE1F2E621A4943600745EFB /* TripletsSum */ = {
+			isa = PBXGroup;
+			children = (
+				9DE1F2E721A4945900745EFB /* TripletsSum.cpp */,
+				9DE1F2E821A4945900745EFB /* TripletsSum.hpp */,
+			);
+			path = TripletsSum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DE1F2E921A4945900745EFB /* TripletsSum.cpp in Sources */,
 				9DC35DEE218E3D66004ED28A /* non_abundant_sum.cpp in Sources */,
 				9DC35DE2218DD5ED004ED28A /* main.cpp in Sources */,
 			);
@@ -256,6 +278,7 @@
 		9DC35DE6218DD5ED004ED28A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4AR6R2SCHV;
 				OTHER_LDFLAGS = "-v";
@@ -266,6 +289,7 @@
 		9DC35DE7218DD5ED004ED28A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4AR6R2SCHV;
 				OTHER_LDFLAGS = "-v";

@@ -51,6 +51,10 @@ int naiveSumOfDivisors(int number){
 		return 1;
 	int sum{number + 1};
 	int i;
+	/*
+	 * we use the theorem that says that any number n can at most have one prime factor
+	 * greater than square root(n)
+	 */
 	for(i = 2; i * i < number; i++)
 		if(isDivisorOf(i, number))
 			sum += i + number / i;
