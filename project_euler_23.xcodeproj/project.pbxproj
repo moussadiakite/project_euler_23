@@ -10,6 +10,9 @@
 		9DC35DE2218DD5ED004ED28A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DC35DE1218DD5ED004ED28A /* main.cpp */; };
 		9DC35DEE218E3D66004ED28A /* non_abundant_sum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DC35DED218E3D66004ED28A /* non_abundant_sum.cpp */; };
 		9DE1F2E921A4945900745EFB /* TripletsSum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE1F2E721A4945900745EFB /* TripletsSum.cpp */; };
+		9DFA3CA621AAE56E009C92DC /* BinaryStringsFromPattern.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA3CA421AAE56E009C92DC /* BinaryStringsFromPattern.cpp */; };
+		9DFA3CAA21AAF8E1009C92DC /* CountOfStrings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA3CA821AAF8E1009C92DC /* CountOfStrings.cpp */; };
+		9DFA3CAD21AB239B009C92DC /* LexicographicPermutations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA3CAB21AB239B009C92DC /* LexicographicPermutations.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +35,12 @@
 		9DC35DEF218E4375004ED28A /* non_abundant_sum_constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = non_abundant_sum_constants.h; sourceTree = "<group>"; };
 		9DE1F2E721A4945900745EFB /* TripletsSum.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TripletsSum.cpp; sourceTree = "<group>"; };
 		9DE1F2E821A4945900745EFB /* TripletsSum.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TripletsSum.hpp; sourceTree = "<group>"; };
+		9DFA3CA421AAE56E009C92DC /* BinaryStringsFromPattern.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BinaryStringsFromPattern.cpp; sourceTree = "<group>"; };
+		9DFA3CA521AAE56E009C92DC /* BinaryStringsFromPattern.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinaryStringsFromPattern.hpp; sourceTree = "<group>"; };
+		9DFA3CA821AAF8E1009C92DC /* CountOfStrings.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CountOfStrings.cpp; sourceTree = "<group>"; };
+		9DFA3CA921AAF8E1009C92DC /* CountOfStrings.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CountOfStrings.hpp; sourceTree = "<group>"; };
+		9DFA3CAB21AB239B009C92DC /* LexicographicPermutations.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LexicographicPermutations.cpp; sourceTree = "<group>"; };
+		9DFA3CAC21AB239B009C92DC /* LexicographicPermutations.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LexicographicPermutations.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +57,8 @@
 		9DC35DD5218DD5ED004ED28A = {
 			isa = PBXGroup;
 			children = (
+				9DFA3CA721AAF892009C92DC /* CountOfStrings */,
+				9DFA3CA321AAE53E009C92DC /* BinaryStringsFromPattern */,
 				9DE1F2E621A4943600745EFB /* TripletsSum */,
 				9DC35DF3218EF8EA004ED28A /* Main */,
 				9DC35DEB218E3D15004ED28A /* Lexicographic permutations */,
@@ -78,6 +89,8 @@
 		9DC35DEB218E3D15004ED28A /* Lexicographic permutations */ = {
 			isa = PBXGroup;
 			children = (
+				9DFA3CAB21AB239B009C92DC /* LexicographicPermutations.cpp */,
+				9DFA3CAC21AB239B009C92DC /* LexicographicPermutations.hpp */,
 			);
 			path = "Lexicographic permutations";
 			sourceTree = "<group>";
@@ -97,6 +110,24 @@
 				9DE1F2E821A4945900745EFB /* TripletsSum.hpp */,
 			);
 			path = TripletsSum;
+			sourceTree = "<group>";
+		};
+		9DFA3CA321AAE53E009C92DC /* BinaryStringsFromPattern */ = {
+			isa = PBXGroup;
+			children = (
+				9DFA3CA421AAE56E009C92DC /* BinaryStringsFromPattern.cpp */,
+				9DFA3CA521AAE56E009C92DC /* BinaryStringsFromPattern.hpp */,
+			);
+			path = BinaryStringsFromPattern;
+			sourceTree = "<group>";
+		};
+		9DFA3CA721AAF892009C92DC /* CountOfStrings */ = {
+			isa = PBXGroup;
+			children = (
+				9DFA3CA821AAF8E1009C92DC /* CountOfStrings.cpp */,
+				9DFA3CA921AAF8E1009C92DC /* CountOfStrings.hpp */,
+			);
+			path = CountOfStrings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +188,9 @@
 			files = (
 				9DE1F2E921A4945900745EFB /* TripletsSum.cpp in Sources */,
 				9DC35DEE218E3D66004ED28A /* non_abundant_sum.cpp in Sources */,
+				9DFA3CA621AAE56E009C92DC /* BinaryStringsFromPattern.cpp in Sources */,
+				9DFA3CAD21AB239B009C92DC /* LexicographicPermutations.cpp in Sources */,
+				9DFA3CAA21AAF8E1009C92DC /* CountOfStrings.cpp in Sources */,
 				9DC35DE2218DD5ED004ED28A /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

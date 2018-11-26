@@ -12,5 +12,6 @@
 #include <vector>
 
 void printTripletsSum(const std::vector<int>& arr);
+void printTripletsSumEnhanced(const std::vector<int>& arr);
 
 #endif /* TripletsSum_hpp */
