@@ -13,6 +13,8 @@
 		9DFA3CA621AAE56E009C92DC /* BinaryStringsFromPattern.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA3CA421AAE56E009C92DC /* BinaryStringsFromPattern.cpp */; };
 		9DFA3CAA21AAF8E1009C92DC /* CountOfStrings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA3CA821AAF8E1009C92DC /* CountOfStrings.cpp */; };
 		9DFA3CAD21AB239B009C92DC /* LexicographicPermutations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA3CAB21AB239B009C92DC /* LexicographicPermutations.cpp */; };
+		9DFA3CB121ADCE5D009C92DC /* RecyprocalCycles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA3CAF21ADCE5D009C92DC /* RecyprocalCycles.cpp */; };
+		9DFA3CB521B27561009C92DC /* DistinctPowers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DFA3CB321B27561009C92DC /* DistinctPowers.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +43,10 @@
 		9DFA3CA921AAF8E1009C92DC /* CountOfStrings.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CountOfStrings.hpp; sourceTree = "<group>"; };
 		9DFA3CAB21AB239B009C92DC /* LexicographicPermutations.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LexicographicPermutations.cpp; sourceTree = "<group>"; };
 		9DFA3CAC21AB239B009C92DC /* LexicographicPermutations.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LexicographicPermutations.hpp; sourceTree = "<group>"; };
+		9DFA3CAF21ADCE5D009C92DC /* RecyprocalCycles.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RecyprocalCycles.cpp; sourceTree = "<group>"; };
+		9DFA3CB021ADCE5D009C92DC /* RecyprocalCycles.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RecyprocalCycles.hpp; sourceTree = "<group>"; };
+		9DFA3CB321B27561009C92DC /* DistinctPowers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DistinctPowers.cpp; sourceTree = "<group>"; };
+		9DFA3CB421B27561009C92DC /* DistinctPowers.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DistinctPowers.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,8 @@
 		9DC35DD5218DD5ED004ED28A = {
 			isa = PBXGroup;
 			children = (
+				9DFA3CB221B27544009C92DC /* DistinctPowers */,
+				9DFA3CAE21ADCE33009C92DC /* ReciprocalCycles */,
 				9DFA3CA721AAF892009C92DC /* CountOfStrings */,
 				9DFA3CA321AAE53E009C92DC /* BinaryStringsFromPattern */,
 				9DE1F2E621A4943600745EFB /* TripletsSum */,
@@ -90,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				9DFA3CAB21AB239B009C92DC /* LexicographicPermutations.cpp */,
-				9DFA3CAC21AB239B009C92DC /* LexicographicPermutations.hpp */,
 			);
 			path = "Lexicographic permutations";
 			sourceTree = "<group>";
@@ -115,6 +122,7 @@
 		9DFA3CA321AAE53E009C92DC /* BinaryStringsFromPattern */ = {
 			isa = PBXGroup;
 			children = (
+				9DFA3CAC21AB239B009C92DC /* LexicographicPermutations.hpp */,
 				9DFA3CA421AAE56E009C92DC /* BinaryStringsFromPattern.cpp */,
 				9DFA3CA521AAE56E009C92DC /* BinaryStringsFromPattern.hpp */,
 			);
@@ -128,6 +136,24 @@
 				9DFA3CA921AAF8E1009C92DC /* CountOfStrings.hpp */,
 			);
 			path = CountOfStrings;
+			sourceTree = "<group>";
+		};
+		9DFA3CAE21ADCE33009C92DC /* ReciprocalCycles */ = {
+			isa = PBXGroup;
+			children = (
+				9DFA3CAF21ADCE5D009C92DC /* RecyprocalCycles.cpp */,
+				9DFA3CB021ADCE5D009C92DC /* RecyprocalCycles.hpp */,
+			);
+			path = ReciprocalCycles;
+			sourceTree = "<group>";
+		};
+		9DFA3CB221B27544009C92DC /* DistinctPowers */ = {
+			isa = PBXGroup;
+			children = (
+				9DFA3CB321B27561009C92DC /* DistinctPowers.cpp */,
+				9DFA3CB421B27561009C92DC /* DistinctPowers.hpp */,
+			);
+			path = DistinctPowers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,7 +215,9 @@
 				9DE1F2E921A4945900745EFB /* TripletsSum.cpp in Sources */,
 				9DC35DEE218E3D66004ED28A /* non_abundant_sum.cpp in Sources */,
 				9DFA3CA621AAE56E009C92DC /* BinaryStringsFromPattern.cpp in Sources */,
+				9DFA3CB121ADCE5D009C92DC /* RecyprocalCycles.cpp in Sources */,
 				9DFA3CAD21AB239B009C92DC /* LexicographicPermutations.cpp in Sources */,
+				9DFA3CB521B27561009C92DC /* DistinctPowers.cpp in Sources */,
 				9DFA3CAA21AAF8E1009C92DC /* CountOfStrings.cpp in Sources */,
 				9DC35DE2218DD5ED004ED28A /* main.cpp in Sources */,
 			);

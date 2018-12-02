@@ -8,20 +8,17 @@
 
 #include <iostream>
 #include <chrono>
-#include "LexicographicPermutations.hpp"
-#include <string>
-#include <set>
+#include "DistinctPowers.hpp"
 
 int main(int argc, const char * argv[])
 {
 	auto start = std::chrono::high_resolution_clock::now();
-    std::set<char> values{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
-    lexicographicPermutations(1000000, values);
+    printNumberOfDistinctPowers(2, 100);
     auto finish = std::chrono::high_resolution_clock::now();
     std::cout << std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start).count() << "ns\n";
-    start = std::chrono::high_resolution_clock::now();
-    lexicographicPermutationsImproved(1000000, values);
+    /*start = std::chrono::high_resolution_clock::now();
+    lexicographicPermutationsImproved(nth, values);
     finish = std::chrono::high_resolution_clock::now();
-    std::cout << std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start).count() << "ns\n";
+    std::cout << std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start).count() << "ns\n";*/
     return 0;
 }

@@ -10,6 +10,7 @@
 #include "CountOfStrings.hpp"
 #include <string>
 #include <iostream>
+#include <cmath>
 
 static int count;
 
@@ -31,15 +32,6 @@ void lexicographicPermutations(int index, int nth, std::set<char>& values, std::
     }
 }
 
-int swap(std::string& s, int i, int j){
-    if(i < 0 || j < 0 || i >= s.size() || j >= s.size())
-        return -1;
-    char tmp = s[i];
-    s[i] = s[j];
-    s[j] = tmp;
-    return 1;
-}
-
 int shift(std::string& s, int i, int j){
     if(i == j)
         return 1;
@@ -54,25 +46,30 @@ int shift(std::string& s, int i, int j){
 void lexicographicPermutationsImproved(int nth, std::set<char>& values){
     std::string permutations("0123456789");
     count = 0;
-    int n = static_cast<int>(values.size());
+    int nb_characters = static_cast<int>(values.size());
+    int nb_remaining_characters = nb_characters;
     int i;
-    long long forwardPermutationsNb;
-    int j = 0;
-    int remainingPermutations = nth - count;
-    while(n > 0 && remainingPermutations > 0){
-        i = 0;
-        forwardPermutationsNb = 0;
-        while(forwardPermutationsNb < remainingPermutations){
-            ++i;
-            forwardPermutationsNb = i * fact(n);
-        }
-        if(i - 1 != 0){
-            shift(permutations, j, j + i - 1);
+    int j = -1;
+    int remainingPermutationsCount = nth - count;
+    long long fact_n = fact(nb_remaining_characters);
+    while(nb_remaining_characters > 0 && remainingPermutationsCount > 0){
+        i = remainingPermutationsCount / fact_n;
+        if(i * fact_n != remainingPermutationsCount){
+            shift(permutations, j, j + i);
             ++j;
+        } else {
+            shift(permutations, j, j + i - 1);
+            char tmp;
+            for(int k = j + 1, l = nb_characters - 1; k < l; ++k, --l){
+                tmp = permutations[k];
+                permutations[k] = permutations[l];
+                permutations[l] = tmp;
+            }
         }
-        count += (i- 1) * fact(n);
-        remainingPermutations = nth - count;
-        --n;
+        count += i * fact_n;
+        remainingPermutationsCount = nth - count;
+        fact_n /= nb_remaining_characters;
+        --nb_remaining_characters;
     }
     std::cout << permutations << std::endl;
 }
