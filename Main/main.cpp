@@ -8,12 +8,12 @@
 
 #include <iostream>
 #include <chrono>
-#include "DistinctPowers.hpp"
+#include "DigitFifthPowers.hpp"
 
 int main(int argc, const char * argv[])
 {
 	auto start = std::chrono::high_resolution_clock::now();
-    printNumberOfDistinctPowers(2, 100);
+    printSumOfAllNumbers(5);
     auto finish = std::chrono::high_resolution_clock::now();
     std::cout << std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start).count() << "ns\n";
     /*start = std::chrono::high_resolution_clock::now();
